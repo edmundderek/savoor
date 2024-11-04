@@ -11,27 +11,56 @@
 <body>
     <!-- Sticky Banner -->
     <header>
-        <div class="logo">
-            <img src="img/logo.svg" alt="Savoor Logo">
-        </div>
-        <nav>
+
+        <nav class="navbar">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="black"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
+            
+                    <li><a href="#">Nos services </a> 
+                    <li><a href="#">Qui sommes-nous?</a></li>
+                    <li><a href="#">Se connecter</a></li>
+                    <li><a href="#" class="sign-up">S'inscrire</a></li>
+            </ul>
             <ul>
-                <li><a href="#">Nos services </a> <svg width="24px" height="24px" viewBox="-0.75 -0.75 16.50 16.50" fill="solid" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.15"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="#000000"></path> </g></svg> </li>
-                <li><a href="#">Qui sommes-nous</a></li>
-                <li><a href="#">Se connecter</a></li>
-                <li><a href="#" class="sign-up">S'inscrire</a></li>
+                <li class="logo"><a href="#">Kita-b</a> 
+                <li class="hideOnMobile"><a href="#">Nos services </a> 
+                <li class="hideOnMobile"><a href="#">Qui sommes-nous?</a></li>
+                <li class="hideOnMobile"><a href="#">Se connecter</a></li>
+                <li class="hideOnMobile"><a href="#" class="sign-up">S'inscrire</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="rem" fill="black"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <h1>Savoor</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-        <div class="image-container">
-            <img src="img/image.jpg" alt="Learning Platform Image">
-        </div>
+        <h1>Kita-b</h1>
+        <p>Votre livre scolaire interactif accessible partout et à tout mement.</p>
+             <div class="btn"> 
+                <button class="button" onclick="location.href='https:edmundderek.github.io/savoor/cours1.html'">Commencer</button>
+             </div>
+            <div class="image-container">
+                <img src="img/image.jpg" alt="Learning Platform Image">
+            </div>
+       
+        
     </main>
+    <footer>
+        <p>© 2024 Edmund Derek</p>
+      </footer>
+
+    <script>
+            function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display= 'flex'
+            
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display= 'none'
+
+}
+
+    </script>
 </body>
 </html>

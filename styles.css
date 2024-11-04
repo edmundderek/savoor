@@ -1,4 +1,5 @@
 /* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,60 +8,147 @@
 
 /* Use Roboto font for the entire page */
 body {
-    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    font-family: Poppins, sans-serif;
     background-color: #E5E4E0;  /* Light blue background */
     color: #333;
     text-align: center;
-    padding: 0;
-    margin: 0;
+    
 }
+
 
 /* Sticky Banner */
-header {
+nav {
+    
     background-color: #ffffff;  /* White background for the header */
-    padding: 10px;
-    position: sticky;
-    top:0;
-    z-index: 1000;
+    /*padding: 1rem;*/
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+z-index: 10;
+}
+
+
+nav ul{
+    width: 100%;
+    list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
-header .logo img {
-    width: 40px;
-}
-
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
+nav li{
+    height: 60px;
+    /* text-decoration: none;
+    list-style: none;
+    height: 50px;
     color: #333;
-    padding: 8px 12px;
-    font-weight: 500;
+    padding: 12px 12px;
+    font-weight: 500;  */
+
+}
+nav a{
+        height: 100%;
+        padding: 1rem 1rem;
+        margin-left: 0.5rem;
+        text-decoration: none;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        color: black
+
+}
+nav a:hover{
+    background-color: rgb(228, 228, 228);
+
+
+}
+nav li:first-child{
+
+    margin-right: auto;
+}
+nav ul .logo{
+
+    font-weight: bolder;
+    
 }
 
-header nav ul li a.sign-up {
-    background-color: #28a745;
+.navbar{
+
+position: fixed;
+top: 0;
+width: 100%;
+}
+.sidebar{
+position: fixed;
+top: 0;
+right: 0;
+height: 100vh;
+width: 250px;
+z-index: 999;
+background-color: white;
+box-shadow: -5px -2px 4px rgba(0, 0, 0, 0.2);
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+
+
+}
+.menu-button{
+    display: none;
+}
+nav ul li a.sign-up {
+    background-color: #3a0ca3;
     color: white;
-    border-radius: 5px;
-    padding: 8px 12px;
-    font-weight: 700;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    font-weight: 500;
+    
+}
+nav ul li a.sign-up:hover{
+
+    background-color: #321b68;
+}
+
+button {
+color: white;
+background-color: #3a0ca3;
+position: relative;
+padding: 10px 2rem;
+border: none;
+outline: none;
+z-index: 5;
+font-size: 20px;
+font-weight: bolder;
+
+
+
+}
+.btn :hover {
+    scale: 1.1;
+    border: 4px solid rgb(228, 228, 228);
+    background-color: #321b68; 
+  color: white;
+  outline: none;
+  box-shadow: 10px 10px 0px -4px rgba(0,0,0,0.8);
+
+
 }
 
 /* Main Content */
 main {
+
     margin: 40px 0;
-    padding: 20px;
+    padding: 10px;
+   
     background-color: #E5E4E0;  /* Light gray background for the main content */
 }
 
 main h1 {
+    margin-top: 10%;
     font-size: 3em;
     color: #333;
     font-weight: 700;
@@ -78,34 +166,26 @@ main p {
     display: flex;
     justify-content: center;
     padding: 20px;
+    margin: 20px ;
 }
 
 .image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 80%;
+    aspect-ratio: auto ;
+    border-radius: 50px;
     /* Ensure the image is responsive */
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    /* Adjust the header for mobile */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+@media (max-width: 800px) {
+    
+    .hideOnMobile{
 
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        display: none;
     }
-
-    header nav ul li a {
-        padding: 10px 15px;
+    .menu-button{
+        display: block;
     }
-
-    /* Adjust the font sizes for mobile */
     main h1 {
         font-size: 2.5em;
     }
@@ -119,22 +199,29 @@ main p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
+
+.sidebar{
+
+    width: 100vw;
+    height: 100vh;
+}
     /* Further adjust for very small screens */
-    header {
+    /*header {
         padding: 10px;
+        position: relative;
     }
 
     header nav ul {
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
     /* Stack navigation items vertically for small devices */
-    header nav ul li {
-        width: 100%;
+    /*header nav ul li {
+        width: 900%;
         text-align: left;
-    }
+    } /*
 
     /* Adjust main content padding */
     main {
@@ -146,3 +233,8 @@ main p {
         max-width: 90%;
     }
 }
+
+    footer{
+
+        font-size: 0.8rem;
+    }
