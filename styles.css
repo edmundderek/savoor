@@ -235,9 +235,9 @@ main p {
 }
 
     footer{
+        position: relative;
         text-align: center;
         font-size: 0.6rem;
-        position: fixed;
         bottom: 0;
         padding-bottom:1rem;
     }
