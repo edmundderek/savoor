@@ -239,5 +239,5 @@ main p {
         text-align: center;
         font-size: 0.6rem;
         bottom: 0;
-        padding-bottom:1rem;
+        padding: 0.5rem 0.5rem;
     }
