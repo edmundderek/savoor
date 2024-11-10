@@ -12,16 +12,16 @@
                 <nav class="navbar">
                     <ul class="sidebar">
                             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="black"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
-                            <li><a href="#">Nos services </a> 
-                            <li><a href="#">Qui sommes-nous?</a></li>
-                            <li><a href="#">Se connecter</a></li>
+                            <li><a href="#aboutus">Qui sommes-nous?</a></li>
+                            <li><a href="#services">Nos services </a> 
+                            <li class="login"><a href="#"class="login">Se connecter</a></li>
                             <li><a href="#" class="sign-up">S'inscrire</a></li>
                     </ul>
                     <ul>
                             <li class="logo"><a href="#">Kita-b</a> 
-                            <li class="hideOnMobile"><a href="#">Nos services </a> 
-                            <li class="hideOnMobile"><a href="#">Qui sommes-nous?</a></li>
-                            <li class="hideOnMobile"><a href="#">Se connecter</a></li>
+                            <li class="hideOnMobile"><a href="#aboutus">Qui sommes-nous?</a></li>
+                            <li class="hideOnMobile"><a href="#services">Nos services </a> 
+                            <li class="hideOnMobile"><a href="#" class="sign-in">Se connecter</a></li>
                             <li class="hideOnMobile"><a href="#" class="sign-up">S'inscrire</a></li>
                             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="rem" fill="black"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
                             </ul>
@@ -29,20 +29,61 @@
         </header>
                     <!-- Main Content -->
         <main>
-                <h1>Kita-b</h1>
-                <p>Votre livre scolaire interactif accessible partout et à tout mement.</p>
+            <div class="hero">
+                <div class="herotext"><h1>Kita-b</h1>
+                <p>Votre compagnon scolaire interactif accessible partout et à tout mement.</p>
                 <div class="btn"> 
                     <button onclick="location.href='https:edmundderek.github.io/savoor/cours/cours1.html'">COMMENCER</button>
                 </div>
-                <div class="image-container">
-                    <img src="img/image.jpg" alt="Learning Platform Image">
-                </div>   
+                </div>
+               <div class="image-container">
+                    <img class="heroimg" src="img/hero.png" alt="Learning Platform Image">
+                </div>
                 
+            </div>
+<div class="services" id="services">
+
+                        <div class="card one">
+                            <img class="icon" src="img/plus-icon.png" alt="plastic plus icon">
+                            <h1>variation</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem eaque libero iusto nobis ullam sint quis impedit eligendi nostrum.</p>
+                        </div>
+
+                        <div class="card two">
+                            <img class="icon" src="img/success-icon.png" alt="plastic success icon">
+                            <h1>intiutive</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                 Architecto iure cupiditate aut corporis adipisci ut culpa!</p>
+                        </div>
+
+                        <div class="card three">
+                            
+                            <img class="icon" src="img/metal-world-web-.png" alt="plastic globe">
+                            <h1>amusant</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed provident quod
+                                 explicabo blanditiis a.</p>
+                        </div>
+
+                        <div class="card four">
+                           
+                            <img class="icon" src="img/rocket-icon.png" alt="plastic rocket icon">
+                            <h1>interactif</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae unde,
+                                 ea cupiditate voluptate nobis pariatur explicabo est?</p>
+                        </div>
+</div>
+
+                <div class="aboutus" id="aboutus">
+                    <h1>Sur nous</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quis dolor ad blanditiis illo nemo. Repellendus assumenda numquam asperiores facilis, dolorem earum dignissimos ipsum inventore possimus architecto facere fugit cumque modi ipsa. Assumenda atque minima accusantium? Tempore recusandae neque molestiae! Ipsum at quasi nesciunt, ducimus incidunt doloribus iusto non illum?</p>
+
+                </div>
         </main>
-       
+       <div class="footr">
         <footer>
             <p>© 2024 Edmund Derek</p>
     </footer>
+</div>
                     <script>
                             function showSidebar(){
                                     const sidebar = document.querySelector('.sidebar')
