@@ -2,15 +2,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400..700&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root{
+
+    /*colors*/
+    /* main colors */
+        --clrmain100:#e6eeff;
+        --clrmain200:#a6c7ed;
+        --clrmain300:#749be8;
+        --clrmain400:#2b70ed;
+        --clrmain500:#1c51e5;
+        --clrmain600:#002789;
+        --clrmain700:#052166;
+        --clrmain800:#00184c;
+        --clrmain900:#000719;
+    /* purpole colors  */
+        --clrpurple100:#f2e8fc;
+        --clrpurple200:#d9bdf4;    
+        --clrpurple300:#c395ef;
+        --clrpurple400:#b578ef;
+        --clrpurple500:#9245dd;
+        --clrpurple600:#7027b7;
+        --clrpurple700:#460b84;
+        --clrpurple800:#32055e;
+        --clrpurple900:#16012b;
+    /* pink colors */
+    --clrpink100:#ffe9f1;
+    --clrpink200:#f9c7dc;
+    --clrpink300:#f9a5c7;
+    --clrpink400:#f973aa;
+    --clrpink500:#e5457f;
+    --clrpink600:#c43972;
+    --clrpink700:#960842;
+    --clrpink800:#63052d;
+    --clrpink900:#63052d;
+    /* orange colors */
+    --clrorange100:#f9ece1;
+    --clrorange200:#efc7a3;
+    --clrorange300:#efaf7f;
+    --clrorange400:#ef9e56;
+    --clrorange500:#f27b34;
+    --clrorange600:#a3520a;
+    --clrorange700:#823704;
+    --clrorange800:#4f2703;
+    --clrorange900:#231100;
+    /* green colors */
+    --clrgreen100:#d5f7e3;
+    --clrgreen200:#a7eabb;
+    --clrgreen300:#82d89c;
+    --clrgreen400:#32bf79;
+    --clrgreen500:#3aa06a;
+    --clrgreen600:#187a42;
+    --clrgreen700:#074f2b;
+    --clrgreen800:#053a1c;
+    --clrgreen900:#001c0d;
+    /* red colors */
+    --clrred100:#f9e4e4;
+    --clrred200:#f4b5b5;
+    --clrred300:#ea9696;
+    --clrred400:#ea6363;
+    --clrred500:#dd4343;
+    --clrred600:#a82626;
+    --clrred700:#8c1b1b;
+    --clrred800:#680b0b;
+    --clrred900:#210101;
+    /* yellow colors */
+    --clryellow100:#fff5ca;
+    --clryellow200:#f9e9aa;
+    --clryellow300:#fce790;
+    --clryellow400:#f9de69;
+    --clryellow500:#eac93d;
+    --clryellow600:#c6a724;
+    --clryellow700:#967c0f;
+    --clryellow800:#685505;
+    --clryellow900:#211b01;
+    
+    
+    
+    
+    }
 *{
 
     margin: 0;
     padding: 0;
 }
 body {
+
     font-family: Itim, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    display: flex;
-    height: fit-content, 200vh;
+    height:  fit-content, 100vh;
+    width: 100%;
     justify-content: center;
     align-items: top;
     background-color: white;
@@ -20,23 +100,32 @@ body {
 .content {
 
     line-height: 1.6;
-    display: block;
-    margin-top: 10px;
-    padding: 1rem;
-    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title title"
+    "contenu contenu"
+    "example image"
+     "example image"
+    "note note";
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+   
     text-align: left;
-    max-width: 600px;
+   max-width: 90%;
     background: repeating-linear-gradient(#0000 0 calc(20px - 1px),#78baf383 0 20px) right bottom /100% 100%,linear-gradient(#FFCECD 0 0) 30px 0/2px 100% #ffffff;
     background-repeat: no-repeat;
-    height: fit-content;
+
     margin-top: 0;
     box-shadow: 6px 0 4px -4px #000000, -6px 0 4px -4px #000000; 
     -moz-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
    -webkit-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999;
+   overflow: clip;
 
 }
 
-h1 {
+/* h1 {
     font-family: Concert One;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -45,54 +134,72 @@ h1 {
     color: rgb(0, 105, 255);
     border: 0.2rem solid rgb(0, 105, 255);
     border-radius: 1.5rem;
-}
+} */
 
-p {
+
+.titre{
+
+        grid-area: titre;
+      font-family: Concert One;
+        font-size: 1rem;
+        font-weight: bolder;
+        text-align: center;
+    margin: 1rem;
+        color:var(--clrmain500);
+        border: 0.2rem solid var(--clrmain500);
+        border-radius: 1.5rem;
+    
+}
+.contenu p{
+    grid-area: contenu;
+    display:flex;
     font-size: 1rem;
     font-weight: normal;
-    padding: 0.5rem;
+    padding-left:2rem;
+
+}
+.audiobtn{
+padding:10px;
+display: flex;
+align-items: start;
+
 }
 .examples{
+    grid-area: example;
 
-    position: relative;
-    display: block;
-    width: fit-content;
-    height: fit-content;
+    padding-left: 2rem;
 }
 .examples h2{
-text-align: center;
+
     font-weight: 400;
 }
 
 .examples p {
     font-weight: normal;
- 
+    
 }
 
 .img1 { 
-    position: absolute;
-    top:0;
-    right:0;
-    translate: 120% 20%;
-    height: 160px;
-    width: 160px;
+grid-area: image;
+    height: 180px;
+    width: 180px;
+    padding: 1rem;
   border-radius: 2rem;
-  transform: rotate(5deg);
-  transition: 0.5s;
-  display: flex;
 
+  transition: 0.5s;
 
 
 }
 
 .img1:hover{
-    /* transition: transform 0.5s; */
+    transform: rotate(4deg);
+    transition: transform 0.8s ease;
     scale: 1.1;
     
 }
 
 .float{
-    color: darkmagenta;
+color: var(--clrpurple600);
 animation: animate 2s ease-in-out infinite;
 
                
@@ -115,18 +222,20 @@ opacity: 0.5;
                     }
     
 }
-.important{
+.note{
+    margin:0.5rem;
+    grid-area: note;
 
-    background-color:transparent;
     animation: important 2s ease-in-out infinite;
-    
+    padding-left: 2rem;
 
 }
-.important p{
-    color: red;
+.note p{
+    color: var(--clrred500);
+
 }
-.important h2{
-    color: red;
+.note h2{
+    color:var(--clrred500);
 font-size: 1.2rem;
 text-align: left;
 }
