@@ -449,8 +449,8 @@ aspect-ratio: auto;
         "heroimg";
     }
     .image-container{
-    height: 100%px;
-    width: 100%px;
+    height: 100%;
+    width: 100%;
     }
 }
 
@@ -462,13 +462,37 @@ aspect-ratio: auto;
     height: fit-content;
     padding-bottom: 1rem;
 }
+main{
+    max-width:100%;
 
-    .image-container{
-        height: 150px;
-        width: 150px;
-        }
 }
+.hero{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "herotext"
+    "btn"
+    "heroimg";
+   
+}
+.herotext p{
+    width: 80%;
+margin: auto;
+    padding: 1rem ;
+}
+   .heroimg{ 
+    padding: 1rem;
 
+ align-self: center;
+ margin: auto;
+
+   }
+
+   .btn{
+
+    margin: auto;
+    padding-bottom: 2rem;
+}
+}
     footer{
 
         height: 30px;
