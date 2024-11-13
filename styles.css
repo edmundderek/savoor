@@ -506,6 +506,7 @@ aspect-ratio: auto;
     }
     main{
         max-width:100%;
+	    padding:1rem;
 
     }
     main h1 {
@@ -532,6 +533,7 @@ aspect-ratio: auto;
         "herotext"
         "btn"
         "heroimg";
+	    margin: auto;
     }
     .heroimg{
     height: 90%;
@@ -549,7 +551,7 @@ aspect-ratio: auto;
 }
 main{
     max-width:100%;
-
+padding: 1rem;
 }
 .hero{
     grid-template-columns: 1fr;
@@ -557,6 +559,7 @@ main{
     "herotext"
     "btn"
     "heroimg";
+	margin: auto;
    
 }
 .herotext p{
