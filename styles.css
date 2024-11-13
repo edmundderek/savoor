@@ -131,7 +131,8 @@ nav a{
         font-size: 1em;
         display: flex;
         align-items: center;
-        color: black
+        color: black;
+        cursor: pointer;
 
 }
 .logo{
@@ -173,6 +174,7 @@ display: none;
 flex-direction: column;
 align-items: flex-start;
 justify-content: flex-start;
+cursor: pointer;
 
 
 }
@@ -204,7 +206,7 @@ nav ul li a.sign-up:hover{
 /* Main Content */
 main {
     height:100%;
-    max-width:80%;
+    max-width:90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -215,42 +217,46 @@ main {
    justify-content: center;
    align-content: center;
    margin: auto;
-  
     background-color: #ffffff;  /* Light gray background for the main content */
 }
 
 .hero{
 grid-area: hero;
-max-width: 100%;
+max-width: 400px;
 padding: 1rem;
 background-color: white;
-display: inline-grid;
+display: grid;
+margin: auto;
 grid-template-columns: 1fr 1fr;
+
 grid-template-areas: 
 "herotext heroimg"
+"herotext heroimg"
 "btn heroimg";
+gap: 2rem;
 justify-content: center;
 align-content: center;
-padding-top: 100px;
-overflow-wrap: anywhere;
+margin-top: 80px;
+
 
 
 }
 
 .herotext{
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    top: 80px;
+    display: block;
     justify-content: center;
-    align-self: center;
+    align-content: center;
     grid-area: herotext;
-    margin: auto;
-    width: 400px;
-    padding-top:2em;
+margin: auto;
+    width:450px;
+    padding:1em;
 
 }
 .hero h1 {
-
-    margin-top: auto;
+display: block;
+    margin: auto;
     font-size: 3em;
     color: #333;
     font-weight: 700;
@@ -261,14 +267,13 @@ overflow-wrap: anywhere;
     font-size: 1.2em;
     line-height: 1.5;
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 400;
 
 }
 button {
     grid-area: btn;
     margin: auto;
-
     height: fit-content;
     width: fit-content;
     color: white;
@@ -281,7 +286,7 @@ button {
     border: none;
     overflow: hidden;
     z-index: 5;
-    
+    cursor: pointer;
     }
 
     button:focus{
@@ -342,17 +347,97 @@ transition: 0.8s;
 
     .image-container{
 grid-area: heroimg;
-width: 420px;
-height: 420px;
+width: 450px;
+height: 450px;
 display: block;
-margin: auto;
-justify-content: center;
-align-content: center;
+margin: 1rem;
+
     }
     .heroimg{
+display: block;
         width: 100%;
         height: 100%;
+
+transform: translateY(-10%);
     }
+
+.chatmessage1{
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    padding: 0.6em;
+    border-radius: 20px 20px 20px 0px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding-right: .8em;
+    outline: none;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+
+    z-index: 6;
+
+}
+.message2{
+    border-radius: 00px 20px 20px 20px;
+    top: 50%;
+    left: 30%;
+}
+.greenlight{
+height: 10px;
+width: 10px;
+border-radius: 50%;
+display: inline-flex;
+align-content: center;
+background-color: var(--clrgreen400);
+margin-right:.5em;
+
+animation: onoff 1s ease-in-out infinite;
+
+               
+}
+@keyframes onoff {
+    0%{
+scale: 100%;
+opacity: 0;
+
+    }
+    50%{
+scale: 105%;
+        opacity: 1;
+        
+            }
+            100%{
+scale: 100%;
+                opacity: 0;
+                
+                    }
+
+}
+.chatmessage1 p{
+    font-size: 0.7em;
+    font-weight: 600;
+    display: inline-flex;
+    overflow:clip; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(43, 43, 43); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+    animation: 
+      typing 3s steps(30, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(43, 43, 43); }
+  }
 
     .services{
 grid-area: services;
@@ -448,9 +533,9 @@ aspect-ratio: auto;
         "btn"
         "heroimg";
     }
-    .image-container{
-    height: 100%;
-    width: 100%;
+    .heroimg{
+    height: 90%;
+    width: 90%;
     }
 }
 
@@ -480,9 +565,9 @@ margin: auto;
     padding: 1rem ;
 }
    .heroimg{ 
-    padding: 1rem;
-
- align-self: center;
+    padding: 1em;
+        height: 80%;
+        width: 80%;
  margin: auto;
 
    }
