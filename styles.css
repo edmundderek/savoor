@@ -222,21 +222,19 @@ main {
 
 .hero{
 grid-area: hero;
-max-width: 400px;
 padding: 1rem;
 background-color: white;
 display: grid;
 margin: auto;
 grid-template-columns: 1fr 1fr;
-
 grid-template-areas: 
 "herotext heroimg"
 "herotext heroimg"
 "btn heroimg";
-gap: 2rem;
+gap: 1rem;
 justify-content: center;
 align-content: center;
-margin-top: 80px;
+margin-top: 90px;
 
 
 
@@ -249,26 +247,26 @@ margin-top: 80px;
     justify-content: center;
     align-content: center;
     grid-area: herotext;
-margin: auto;
-    width:450px;
+ margin: auto;
+    width:400px;
     padding:1em;
 
 }
 .hero h1 {
-display: block;
     margin: auto;
+
     font-size: 3em;
     color: #333;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     line-height: 1.5;
     color: #666;
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 500;
 
 }
 button {
@@ -281,8 +279,8 @@ button {
     background-color: var(--clrmain500);
     font-size: 1.2rem ;
     font-weight: bold;
-    position: relative;
-    padding: 0.5em 1em;
+
+    padding: 1rem;
     border: none;
     overflow: hidden;
     z-index: 5;
@@ -339,29 +337,31 @@ transition: 0.8s;
 
     button:hover:after{
 
-        transform: translateX(300px) skewX(-15deg) ;
-        opacity: 1;
-        transition: 1s;
+            transform: translateX(300px) skewX(-15deg) ;
+            opacity: 1;
+            transition: 1s;
 
             }
 
     .image-container{
-grid-area: heroimg;
-width: 450px;
-height: 450px;
-display: block;
-margin: 1rem;
+            grid-area: heroimg;
+            width: 550px;
+            height: 590px;
+            display: block;
+            padding: 1em;
+            margin: auto;
 
     }
     .heroimg{
-display: block;
-        width: 100%;
-        height: 100%;
-
-transform: translateY(-10%);
+            display: block;
+            width: 90%;
+            height: 90%;
+            padding: 1rem;
+            margin: 1rem;
+            transform: translateY(-10%);
     }
 
-.chatmessage1{
+/* .chatmessage1{
     display: inline-block;
     position: relative;
     background-color: white;
@@ -370,10 +370,11 @@ transform: translateY(-10%);
     justify-content: center;
     align-content: center;
     margin: auto;
-    padding-right: .8em;
+    padding-right: 1em;
     outline: none;
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
-
+    top: 15%;
+    left: 10%;
     z-index: 6;
 
 }
@@ -417,28 +418,29 @@ scale: 100%;
     font-size: 0.7em;
     font-weight: 600;
     display: inline-flex;
-    overflow:clip; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(43, 43, 43); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    overflow:clip;  Ensures the content is not revealed until the animation 
+    border-right: .15em solid rgb(43, 43, 43); 
+    white-space: nowrap; 
+    margin: 0 auto; 
 
     animation: 
       typing 3s steps(30, end),
       blink-caret .75s step-end infinite;
   }
   
-  /* The typing effect */
+
   @keyframes typing {
     from { width: 0 }
     to { width: 100% }
   }
   
-  /* The typewriter cursor effect */
+
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgb(43, 43, 43); }
-  }
-
+  } 
+  */
+ 
     .services{
 grid-area: services;
         background-color: var(--clrmain100);
@@ -506,15 +508,15 @@ aspect-ratio: auto;
     }
     main{
         max-width:100%;
-	    padding:1rem;
+margin: auto;
 
     }
     main h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     main p {
-        font-size: 1.2em;
+        font-size: 1em;
     
 
     }
@@ -534,7 +536,20 @@ aspect-ratio: auto;
         "btn"
         "heroimg";
 	    margin: auto;
+        text-align: center;
+
+
     }
+
+    .image-container{
+
+        width: 400px;
+        height: 400px;
+        display: block;
+        padding: 2em;
+        margin: auto;
+
+}
     .heroimg{
     height: 90%;
     width: 90%;
@@ -566,6 +581,15 @@ padding: 1rem;
     width: 80%;
 margin: auto;
     padding: 1rem ;
+}
+.image-container{
+
+    width: 360px;
+    height: 360px;
+
+    padding: 1em;
+    margin: auto;
+
 }
    .heroimg{ 
     padding: 1em;
