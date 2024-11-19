@@ -233,7 +233,7 @@ grid-template-areas:
 "btn heroimg";
 gap: 1rem;
 justify-content: center;
-align-content: center;
+align-items: center;
 margin-top: 90px;
 
 
@@ -243,17 +243,17 @@ margin-top: 90px;
 .herotext{
     position: relative;
     top: 80px;
-    display: block;
+    display: flex;
+    flex-flow: column;
     justify-content: center;
-    align-content: center;
+
     grid-area: herotext;
  margin: auto;
-    width:400px;
+    width: 400px;
     padding:1em;
 
 }
 .hero h1 {
-    margin: auto;
 
     font-size: 3em;
     color: #333;
@@ -279,12 +279,11 @@ button {
     background-color: var(--clrmain500);
     font-size: 1.2rem ;
     font-weight: bold;
-
     padding: 1rem;
     border: none;
     overflow: hidden;
     z-index: 5;
-    cursor: pointer;
+    
     }
 
     button:focus{
@@ -336,7 +335,6 @@ transition: 0.8s;
     }
 
     button:hover:after{
-
             transform: translateX(300px) skewX(-15deg) ;
             opacity: 1;
             transition: 1s;
@@ -344,9 +342,11 @@ transition: 0.8s;
             }
 
     .image-container{
+        justify-content: center;
+        align-items: center;
             grid-area: heroimg;
-            width: 550px;
-            height: 590px;
+            width: 500px;
+            height: 500px;
             display: block;
             padding: 1em;
             margin: auto;
@@ -354,11 +354,11 @@ transition: 0.8s;
     }
     .heroimg{
             display: block;
-            width: 90%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
             padding: 1rem;
             margin: 1rem;
-            transform: translateY(-10%);
+
     }
 
 /* .chatmessage1{
@@ -450,8 +450,6 @@ grid-area: services;
         grid-gap: 2em;
         justify-content: center;
         box-sizing: border-box;
-        padding: 2em 1em;
-        padding-top: 2em;
 
         }
 
@@ -466,9 +464,8 @@ aspect-ratio: auto;
 
     justify-content: start;
     align-items: center;
-    border: 3px solid transparent;
+   
 	background-clip: padding-box;
-
     display: flex;
     flex-direction:column;
     padding: 1em;
@@ -545,14 +542,13 @@ margin: auto;
 
         width: 400px;
         height: 400px;
-        display: block;
         padding: 2em;
         margin: auto;
 
 }
     .heroimg{
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     }
 }
 
@@ -566,7 +562,7 @@ margin: auto;
 }
 main{
     max-width:100%;
-padding: 1rem;
+
 }
 .hero{
     grid-template-columns: 1fr;
@@ -578,14 +574,13 @@ padding: 1rem;
    
 }
 .herotext p{
-    width: 80%;
 margin: auto;
     padding: 1rem ;
 }
 .image-container{
 
-    width: 360px;
-    height: 360px;
+    width: 400px;
+    height: 400px;
 
     padding: 1em;
     margin: auto;
